@@ -1,5 +1,16 @@
 #include <iostream>
-
+#include <string>
+std::string whatTimeIsIt (std::string time){
+        if (time == "morning"){
+            return "It is time to wake up";
+        } else if (time == "afternoon"){
+            return "It is time to eat lunch";
+        } else if (time == "evening"){
+            return "It is time to eat dinner";
+        } else {
+            return "It is time to sleep";
+        }
+    }
 int main(){
     std::cout << "Hello World!" << std::endl;
     int age = 15;
@@ -45,7 +56,30 @@ int main(){
         std::cout << "You are a minor" << std::endl;
         i++;
     }
+    std::string choice;
+    do {
+        int newAge = 0;
 
+        std::cout << "How old are you?" << std::endl;
+        std::cin >> newAge;
+        if (newAge < 18){
+            std::cout << "You are a minor" << std::endl;
+        }
+        else {
+            std::cout << "You are an adult" << std::endl;
+        }
+        std::cout << "Do you want to continue? (y/n)" << std::endl;
+        std::cin >> choice;
+    } while (choice == "yes"); // this is a do while loop that will run as long as choice is yes
+    std::cout << "What time is it?" << std::endl;
+    std::string message;
+    std::cin >> message;
+
+    
+    std::string result = whatTimeIsIt(message);
+    std::cout << result << std::endl;
+
+    
 
     return 0;
 
