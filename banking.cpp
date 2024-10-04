@@ -120,15 +120,16 @@ int main() {
                 std::cout << "Your balance is: $" << myAccount.getBalance() << std::endl;
                 break;
             case 5:
-                std::cout << "Save changes to account?" << std::endl;
+                std::cout << "Save changes to account" << std::endl;
                 myAccount.saveToFile();
+                break;
             case 6:
                 std::cout << "Exiting the system. Thank you!\n";
                 break;
             default:
                 std::cout << "Invalid choice. Try again.\n";
         }
-    } while (choice != 5);
+    } while (choice != 6);
 
     return 0;
 }
